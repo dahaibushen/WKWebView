@@ -9,21 +9,25 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic,weak) id      weakPoint;
+@property (nonatomic,assign) id    assignPoint;
+@property (nonatomic,strong) id    strongPoint;
 @end
 
 @implementation ViewController
+- (void)loadView{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.strongPoint = [NSDate date];
+    NSLog(@"strong属性：%@",self.strongPoint);
+    self.weakPoint = self.strongPoint;
+    self.assignPoint = self.strongPoint;
+    self.strongPoint = nil;
+    NSLog(@"weak属性：%@",self.weakPoint);
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
