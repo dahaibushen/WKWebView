@@ -17,7 +17,6 @@
 @implementation ViewController
 - (void)loadView{
     
-    //使用git提交代码
     [super loadView];
 }
 
@@ -27,7 +26,6 @@
     NSLog(@"11strong属性：%p",self.strongPoint);
     self.weakPoint = self.strongPoint;
     self.assignPoint = self.strongPoint;
-//    NSLog(@"22assign属性：%p :",self.assignPoint);
     self.strongPoint = nil;
     
     NSLog(@"33weak属性：%p :",_weakPoint);
