@@ -17,16 +17,21 @@
 @implementation ViewController
 - (void)loadView{
     
+    
+    [super loadView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.strongPoint = [NSDate date];
-    NSLog(@"strong属性：%@",self.strongPoint);
+    NSLog(@"11strong属性：%p",self.strongPoint);
     self.weakPoint = self.strongPoint;
     self.assignPoint = self.strongPoint;
+//    NSLog(@"22assign属性：%p :",self.assignPoint);
     self.strongPoint = nil;
-    NSLog(@"weak属性：%@",self.weakPoint);
+    
+    NSLog(@"33weak属性：%p :",_weakPoint);
+    NSLog(@"22assign属性：%p :",&_assignPoint);
     
 }
 
