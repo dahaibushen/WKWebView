@@ -30,6 +30,7 @@
     
     NSLog(@"33weak属性：%p :",_weakPoint);
     NSLog(@"22assign属性：%p :",&_assignPoint);
+    //测试代码，不用提交
     
 }
 
